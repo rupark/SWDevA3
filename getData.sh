@@ -27,7 +27,6 @@ avg_time() {
 runNoArgs() {
 	make $1
 	echo "---------SMALL:"
-	ps faux | grep casper
 	avg_time 10 ./sorer -f ../small.sor
 	echo "---------MEDIUM:"
 	avg_time 10 ./sorer -f ../medium.sor
@@ -136,27 +135,48 @@ runDAComp() {
         make $2
          ./sorer -f "$@"   -print_col_idx 3 0
 }
+
+memory() {
+	echo "=================MEMORY==================="
+	echo time result\nmemory:%MKB ./sorer -f small.sor
+	echo time result\nmemory:%MKB ./sorer -f medium.sor
+	echo time result\nmemory:%MKB ./sorer -f large.sor
+}
 	
-#https://github.com/danielgaooooo/a1p1/blob/master/gen_large_sor.py
+echo "https://github.com/danielgaooooo/a1p1"
 cd CS4500_Assignment3
-#1 build, 1 run, 1 iteration
-echo "===============================1 build, 1 run================================="
-runNoArgs build
+memory()
+cd ..
 
-#1 build, multiple runs
-echo "===============================1 build, multiple runs================================="
-echo "---------SMALL:"
-avg_time 10 runDiffArgs ../small.sor build
-echo "---------MEDIUM:"
-avg_time 10 runDiffArgs ../medium.sor build
-echo "---------LARGE:"
-avg_time 10 runDiffArgs ../large.sor build
+echo "=============================================================="
+echo "=============================================================="
+echo "https://github.com/Snowycxn/SnowyJoe-A1P1"
+cd SnowyJoe-A1P1
+memory()
+cd ..
 
-#multiple builds, multiple runs, 1 iteration
-echo "===============================multiple builds, multiple runs================================="
-echo "---------SMALL:"
-avg_time 10 runDAComp ../small.sor
-echo "---------MEDIUM:"
-avg_time 10 runDAComp ../medium.sor
-echo "---------LARGE:"
-avg_time 10 runDAComp ../large.sor
+echo "=============================================================="
+echo "=============================================================="
+echo "https://github.com/gyroknight/boat-a1p1"
+cd boat-a1p1/
+memory()
+cd ..
+
+echo "=============================================================="
+echo "=============================================================="
+echo "https://github.com/oriasm/swdev-assignment1"
+cd swdev-assignment1/part1
+memory()
+cd ..
+
+echo "=============================================================="
+echo "=============================================================="
+echo "https://github.com/az0977776/cs4500-a1p1"
+cd cs4500-a1p1/
+memory()
+cd ..
+
+echo "=============================================================="
+echo "=============================================================="
+echo "https://github.com/jessica-cheng/CS4500_Assignment3"
+memory()
