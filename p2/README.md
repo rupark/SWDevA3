@@ -57,7 +57,11 @@ fwd.add_header("Four-Wheel Drive");
 
 DataFrame* cars = new DataFrame(4, cars, manufacturer, mpg, fwd);
 
-cars.get(1,1) ==> "Camry";
+cars.get(1,1) ==> "Toyota";
+
+cars.contains_col_names() = true;
+
+cars.contains_row_names() = true;
 
 cars.get("Camry", "mpg") ==> 22.2;
 
