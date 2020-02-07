@@ -43,4 +43,47 @@ and each define their hash methods.
 
 **Use Cases:**
 
+StringColumn* cars = new StringColumn(3, "Camry", "Corolla", "RAV4");
+cars.add_header("Row Header");
+StringColumn* manufacturer = new StringColumn(3, "Toyota", "Toyota", "Toyota");
+
+manufacturer.add_header("Manufacturer");
+
+FloatColumn mpg = new FloatColumn(3, 22.2, 29.7, 33.4);
+mpg.add_header("mpg");
+
+BoolColumn fwd = new BoolColumn(3, 0,0,1);
+fwd.add_header("Four-Wheel Drive");
+
+DataFrame* cars = new DataFrame(4, cars, manufacturer, mpg, fwd);
+
+cars.get(1,1) ==> "Camry";
+
+cars.get("Camry", "mpg") ==> 22.2;
+
+cars.nrow() ==> 3;
+
+cars.ncol() ==> 3;
+
+cars.delete_col("mpg");
+
+cars.ncol() ==> 2;
+
+cars.get("Corolla", "mpg") ==>
+
+cars.add(mpg);
+
+cars.get("Corolla","mpg") ==> 29.7
+
+cars.delete_row("Camry");
+
+cars.nrow() ==> 2;
+
+cars.get("Camry", "Four-Wheel Drive") ==> 
+
+cars.add(mpg); ==> will not work because "Camry" row has been deleted
+
+
+
+
  

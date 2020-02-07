@@ -24,7 +24,7 @@ public class DataFrame {
         /**
         * Accepts Columns to add to the DataFrame.
         */
-        DataFrame(Column*...varargs);
+        DataFrame(int num, ...);
 
         /**
         * Creates an empty DataFrame.

@@ -20,6 +20,11 @@ public Column {
         char* get_header();
 
         /**
+         * Adds header to the Column String* s.
+         */
+        void add_header(String* s);
+
+        /**
          * Returns if this column contains a header.
          */
         bool contains_header();
