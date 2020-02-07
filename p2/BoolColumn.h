@@ -4,14 +4,16 @@
 
 #pragma once
 
+#include "stdarg.h"
+
 public class BoolColumn : public Column {
 
         public:
         /**
-         * Creates a Bool Column from undetermined number of
+         * Creates a Bool Column from number num of
          * Bool parameters.
          */
-        BoolColumn(Bool*... args);
+        BoolColumn(int num, ...);
 
         /**
           * Destructor
@@ -22,12 +24,12 @@ public class BoolColumn : public Column {
          * Returns the Bool* to the SoR at the specified
          * index idx in this BoolColumn
          */
-        Bool* get_bool(size_t idx);
+        bool get_bool(size_t idx);
 
         /**
         * Adds Bool b to this BoolColumn at index idx.
         */
-        void add_bool(Bool* b, size_t idx);
+        void add_bool(bool b, size_t idx);
 
 };
 

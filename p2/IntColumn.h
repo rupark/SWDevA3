@@ -8,10 +8,10 @@ public class IntColumn : public Column {
 
 public:
     /**
-     * Creates a Int Column from undetermined number of
+     * Creates a Int Column from number num of
      * Int parameters.
      */
-    IntColumn(Int*... args);
+    IntColumn(int num, ...);
 
     /**
       * Destructor
@@ -19,14 +19,14 @@ public:
     ~IntColumn();
 
     /**
-     * Returns the Int* to the SoR at the specified
+     * Returns the int to the SoR at the specified
      * index idx in this IntColumn
      */
-    Int* get_int(size_t idx);
+    int get_int(size_t idx);
 
     /**
      * Adds Int i to this IntColumn at index idx.
      */
-     void add_int(Int* i, size_t idx);
+     void add_int(int i, size_t idx);
 
 };

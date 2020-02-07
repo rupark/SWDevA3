@@ -8,10 +8,10 @@ public class StringColumn : public Column() {
 
     public:
         /**
-         * Creates a String Column from undetermined number of
+         * Creates a String Column from number num of
          * String parameters.
          */
-         StringColumn(String*... args);
+         StringColumn(int num, ...);
 
         /**
           * Destructor

@@ -5,10 +5,10 @@
 public class FloatColumn : public Column {
     public:
         /**
-         * Creates a Float Column from undetermined number of
+         * Creates a Float Column from number num of
          * Float parameters.
          */
-        FloatColumn(Float*... args);
+        FloatColumn(int num, ...);
 
         /**
           * Destructor
@@ -24,6 +24,6 @@ public class FloatColumn : public Column {
         /**
         * Adds Float f to this FloatColumn at index idx.
         */
-        void add_float(Float* i, size_t idx);
+        void add_float(float i, size_t idx);
 
 };
