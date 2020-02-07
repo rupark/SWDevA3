@@ -42,43 +42,60 @@ and each define their hash methods.
 
 ### Use Cases: ###
 
-**Constructing a column of String SoR type**
+Constructing a column of String SoR type
 
+```
 StringColumn* cars = new StringColumn(3, "Camry", "Corolla", "RAV4");
+```
 
-**Adding a header to the cars column**
+Adding a header to the cars column
 
+```
 cars.add_header("Row Header");
+```
 
-**Constructing another column of String SoR type**
+Constructing another column of String SoR type
 
+```
 StringColumn* manufacturer = new StringColumn(3, "Toyota", "Toyota", "Toyota");
+```
 
-**Adding a header to the manufacturer column**
+Adding a header to the manufacturer column
 
+```
 manufacturer.add_header("Manufacturer");
+```
 
-**Constructing a column of Float SoR type and adding a header**
+Constructing a column of Float SoR type and adding a header
 
+```
 FloatColumn mpg = new FloatColumn(3, 22.2, 29.7, 33.4);
 mpg.add_header("mpg");
+```
 
-**Constructing a column of Bool SoR type and adding a header**
+Constructing a column of Bool SoR type and adding a header**
 
+```
 BoolColumn fwd = new BoolColumn(3, 0,0,1);
 fwd.add_header("Four-Wheel Drive");
+```
 
-**Constructing a column of Int SoR type and adding a header**
+Constructing a column of Int SoR type and adding a header**
 
+```
 IntColumn year = new IntColumn(3, 2000, 2010, 2006);
 fwd.add_header("Year");
+```
 
-**Constructing a DataFrame with the created columns**
+Constructing a DataFrame with the created columns
 
+```
 DataFrame* cars = new DataFrame(4, cars, manufacturer, mpg, fwd, year);
+```
 
-**Examples of retrieving data and manipulating data in the DataFrame**
+Examples of retrieving data and manipulating data in the DataFrame
 
+```
 cars.get(1,1) ==> "Toyota";
 
 cars.contains_col_names() = true;
@@ -108,3 +125,4 @@ cars.nrow() ==> 2;
 cars.get("Camry", "Four-Wheel Drive") ==> 
 
 cars.add(mpg); ==> will not work because "Camry" row has been deleted
+```
