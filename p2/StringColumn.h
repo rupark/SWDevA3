@@ -24,5 +24,10 @@ public class StringColumn : public Column() {
          */
           String* get_string(size_t idx);
 
+        /**
+         * Adds String s to this StringColumn at index idx.
+         */
+          void add_string(String* s, size_t idx);
+
 };
 

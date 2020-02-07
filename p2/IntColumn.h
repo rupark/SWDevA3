@@ -24,5 +24,9 @@ public:
      */
     Int* get_int(size_t idx);
 
+    /**
+     * Adds Int i to this IntColumn at index idx.
+     */
+     void add_int(Int* i, size_t idx);
 
 };

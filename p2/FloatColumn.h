@@ -21,4 +21,9 @@ public class FloatColumn : public Column {
          */
         Float* get_float(size_t idx);
 
+        /**
+        * Adds Float f to this FloatColumn at index idx.
+        */
+        void add_float(Float* i, size_t idx);
+
 };

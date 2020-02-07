@@ -24,5 +24,10 @@ public class BoolColumn : public Column {
          */
         Bool* get_bool(size_t idx);
 
+        /**
+        * Adds Bool b to this BoolColumn at index idx.
+        */
+        void add_bool(Bool* b, size_t idx);
+
 };
 

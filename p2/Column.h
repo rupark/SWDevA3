@@ -20,6 +20,11 @@ public Column {
         char* get_header();
 
         /**
+         * Returns if this column contains a header.
+         */
+        bool contains_header();
+
+        /**
          * Returns type of this Column.
          */
         virtual char* get_col_type();
@@ -34,4 +39,8 @@ public Column {
          */
         virtual size_t hash();
 
+        /**
+         * Removes the SoR at the index idx
+         */
+        void remove(size_t idx);
 };
