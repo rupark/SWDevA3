@@ -3,6 +3,7 @@
 //
 
 #pragma once
+#include "stdarg.h"
 
 public class StringColumn : public Column() {
 

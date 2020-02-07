@@ -2,6 +2,9 @@
 // Created by kramt on 2/6/2020.
 //
 
+#pragma once
+#include "stdarg.h"
+
 public class FloatColumn : public Column {
     public:
         /**
